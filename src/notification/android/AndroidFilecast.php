@@ -1,7 +1,7 @@
 <?php
-namespace Umeng\Notification\Android;
+namespace Jiadd\Umeng\Notification\Android;
 
-use Umeng\Notification\AndroidNotification;
+use Jiadd\Umeng\Notification\AndroidNotification;
 
 class AndroidFilecast extends AndroidNotification {
 	function  __construct() {

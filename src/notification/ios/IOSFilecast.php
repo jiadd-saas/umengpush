@@ -1,7 +1,7 @@
 <?php
-namespace Umeng\Notification\Ios;
+namespace Jiadd\Umeng\Notification\Ios;
 
-use Umeng\Notification\IOSNotification;
+use Jiadd\Umeng\Notification\IOSNotification;
 
 class IOSFilecast extends IOSNotification {
 	function  __construct() {

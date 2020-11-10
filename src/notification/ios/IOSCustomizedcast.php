@@ -1,7 +1,7 @@
 <?php
-namespace Umeng\Notification\Ios;
+namespace Jiadd\Umeng\Notification\Ios;
 
-use Umeng\Notification\IOSNotification;
+use Jiadd\Umeng\Notification\IOSNotification;
 
 class IOSCustomizedcast extends IOSNotification {
 
@@ -14,7 +14,7 @@ class IOSCustomizedcast extends IOSNotification {
 	function isComplete() {
 		parent::isComplete();
 		if (!array_key_exists("alias", $this->data) && !array_key_exists("file_id", $this->data))
-			throw new Exception("You need to set alias or upload file for customizedcast!");
+			throw new \Exception("You need to set alias or upload file for customizedcast!");
 	}
 
 	// Upload file with device_tokens or alias to Umeng

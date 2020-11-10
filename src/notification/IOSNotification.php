@@ -1,5 +1,5 @@
 <?php
-namespace Umeng\Notification;
+namespace Jiadd\Umeng\Notification;
 
 abstract class IOSNotification extends UmengNotification {
 	// The array for payload, please see API doc for more information
