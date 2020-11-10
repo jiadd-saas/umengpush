@@ -1,0 +1,15 @@
+{
+    "name": "jiadd/umeng_push",
+    "description": "插件",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jiadd\\": "src/"
+        }
+    }
+}
