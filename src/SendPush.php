@@ -1,16 +1,16 @@
 <?php
-namespace umeng;
+namespace Umeng;
 
-use umeng\notification\android\AndroidBroadcast;
-use umeng\notification\android\AndroidCustomizedcast;
-use umeng\notification\android\AndroidFilecast;
-use umeng\notification\android\AndroidGroupcast;
-use umeng\notification\android\AndroidUnicast;
-use umeng\notification\ios\IOSBroadcast;
-use umeng\notification\ios\IOSCustomizedcast;
-use umeng\notification\ios\IOSFilecast;
-use umeng\notification\ios\IOSGroupcast;
-use umeng\notification\ios\IOSUnicast;
+use Umeng\Notification\Android\AndroidBroadcast;
+use Umeng\Notification\Android\AndroidCustomizedcast;
+use Umeng\Notification\Android\AndroidFilecast;
+use Umeng\Notification\Android\AndroidGroupcast;
+use Umeng\Notification\Android\AndroidUnicast;
+use Umeng\Notification\Ios\IOSBroadcast;
+use Umeng\Notification\Ios\IOSCustomizedcast;
+use Umeng\Notification\Ios\IOSFilecast;
+use Umeng\Notification\Ios\IOSGroupcast;
+use Umeng\Notification\Ios\IOSUnicast;
 
 class SendPush {
 	protected $androidAppkey           = NULL;

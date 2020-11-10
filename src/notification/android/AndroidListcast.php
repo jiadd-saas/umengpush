@@ -1,7 +1,8 @@
 <?php
-namespace umeng\notification\android;
+namespace Umeng\Notification\Android;
 
-use umeng\notification\AndroidNotification;
+
+use Umeng\Notification\AndroidNotification;
 
 class AndroidListcast extends AndroidNotification {
 	function __construct() {

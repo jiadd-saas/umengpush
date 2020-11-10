@@ -1,7 +1,7 @@
 <?php
-namespace umeng\notification\ios;
+namespace Umeng\Notification\Ios;
 
-use umeng\notification\IOSNotification;
+use Umeng\Notification\IOSNotification;
 
 class IOSCustomizedcast extends IOSNotification {
 

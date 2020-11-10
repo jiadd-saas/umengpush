@@ -1,7 +1,7 @@
 <?php
-namespace umeng\notification\android;
+namespace Umeng\Notification\Android;
 
-use umeng\notification\AndroidNotification;
+use Umeng\Notification\AndroidNotification;
 
 class AndroidCustomizedcast extends AndroidNotification {
 

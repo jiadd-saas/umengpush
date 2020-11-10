@@ -1,5 +1,5 @@
 <?php
-namespace umeng\notification;
+namespace Umeng\Notification;
 
 abstract class UmengNotification {
 	// The host
