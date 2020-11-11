@@ -54,15 +54,14 @@ class SendPush {
     public function sendAndroidUnicast() {
         try {
             $unicast = new AndroidUnicast();
-            var_dump($this->androidAppkey, $this->androidAppkey);
             $unicast->setAppMasterSecret($this->androidAppMasterSecret);
             $unicast->setPredefinedKeyValue("appkey",           $this->androidAppkey);
             $unicast->setPredefinedKeyValue("timestamp",        $this->timestamp);
             // Set your device tokens here
             $unicast->setPredefinedKeyValue("device_tokens",    $this->deviceToken);
-            $unicast->setPredefinedKeyValue("ticker",           $this->params['ticker'] ?? '');   // 必填，通知栏提示文字
-            $unicast->setPredefinedKeyValue("title",            $this->params['title'] ?? '');    // 必填，通知标题
-            $unicast->setPredefinedKeyValue("text",             $this->params['text'] ?? '');     // 必填，通知文字描述
+            $unicast->setPredefinedKeyValue("ticker",           isset($this->params['ticker']) ? $this->params['ticker'] : '');   // 必填，通知栏提示文字
+            $unicast->setPredefinedKeyValue("title",            isset($this->params['title']) ? $this->params['title'] : '');    // 必填，通知标题
+            $unicast->setPredefinedKeyValue("text",             isset($this->params['text']) ? $this->params['text'] : '');     // 必填，通知文字描述
             $unicast->setPredefinedKeyValue("after_open",       "go_app");
             // Set 'production_mode' to 'false' if it's a test device.
             // For how to register a test device, please see the developer doc.
@@ -89,9 +88,9 @@ class SendPush {
             // Set your device tokens here
             $unicast->setPredefinedKeyValue("device_tokens",    $this->deviceToken);
             $unicast->setPredefinedKeyValue("alert", [
-                'title' => $this->params['title'] ?? '',
-                'subtitle' => $this->params['subtitle'] ?? '',
-                'body' => $this->params['body'] ?? ''
+                'title' => isset($this->params['title']) ? $this->params['title'] : '',
+                'subtitle' => isset($this->params['subtitle']) ? $this->params['subtitle'] : '',
+                'body' => isset($this->params['body']) ? $this->params['body'] : ''
             ]);
             // Set customized fields
             if ($this->extra) {
@@ -99,8 +98,6 @@ class SendPush {
                     $unicast->setCustomizedField($key, $item);
                 }
             }
-            //TODO 上线删掉
-            $unicast->setPredefinedKeyValue("production_mode", "false");
 
             $result = $unicast->send();
             return $result;
