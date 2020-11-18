@@ -62,7 +62,8 @@ class SendPush {
             $unicast->setPredefinedKeyValue("ticker",           isset($this->params['ticker']) ? $this->params['ticker'] : '');   // 必填，通知栏提示文字
             $unicast->setPredefinedKeyValue("title",            isset($this->params['title']) ? $this->params['title'] : '');    // 必填，通知标题
             $unicast->setPredefinedKeyValue("text",             isset($this->params['text']) ? $this->params['text'] : '');     // 必填，通知文字描述
-            $unicast->setPredefinedKeyValue("after_open",       "go_app");
+            $unicast->setPredefinedKeyValue("after_open",       "go_custom");
+            $unicast->setPredefinedKeyValue("custom",       "type:1");
             // Set 'production_mode' to 'false' if it's a test device.
             // For how to register a test device, please see the developer doc.
             // Set extra fields
